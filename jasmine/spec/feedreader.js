@@ -167,10 +167,10 @@ $(function() {
                   */
                   feedContainer = document.querySelector('.feed');
                   if (feedContainer !== undefined) {
-                    allFeedAnchors = feedContainer.querySelectorAll('a');
+                    allFeedAnchors = feedContainer.querySelectorAll('.feed .entry');
                     if (allFeedAnchors !== undefined && allFeedAnchors.length > 0) {
                       //Setting value of top feed for previous feed link
-                      previousTopFeedLink = allFeedAnchors[0].href;
+                      previousTopFeedLink = allFeedAnchors[0].innerText;
                     }
                   }
                   let k;
@@ -185,10 +185,10 @@ $(function() {
                     */
                     feedContainer = document.querySelector('.feed');
                     if (feedContainer !== undefined) {
-                      allFeedAnchors = feedContainer.querySelectorAll('a');
+                      allFeedAnchors = feedContainer.querySelectorAll('.feed .entry');
                       if (allFeedAnchors !== undefined && allFeedAnchors.length > 0) {
                         //Setting value of top feed for current feed link
-                        currTopFeedLink = allFeedAnchors[0].href;
+                        currTopFeedLink = allFeedAnchors[0].innerText;
                       }
                     }
                     done();
